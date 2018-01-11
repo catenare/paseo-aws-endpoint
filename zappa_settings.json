@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "app_function": "contactus.contactus.contactus.app",
+        "aws_region": "eu-central-1",
+        "profile_name": "default",
+        "project_name": "aws-lambda",
+        "runtime": "python3.6",
+        "keep_warm": false,
+        "domain": "gateway.paseo.org.za",
+        "cors": false, 
+        "s3_bucket": "zappa-5cfmlz0tz",
+        "lambda_description": "Paseo Contact Us",
+        "environment_variables": {"CAPTCHA_KEY": "6LcbXDQUAAAAAP2G436cLxoUhSdMJ_03lUDzhD2h"}
+    }
+}

@@ -22,6 +22,7 @@ def home():
 @app.route('/register', methods=['POST'])
 def register():
   registration = request.get_json()
+  # print('Data Details:', request.values)
   response = make_response('0')
   verify = verify_captcha(registration)
   if verify == True:
@@ -32,6 +33,7 @@ def register():
 
 # Captcha verify
 def verify_captcha(captcha):
+  print("Captcha Details:", captcha)
   captcha_data = {
     'secret': app.config['CAPTCHA_KEY'],
     'response': captcha['captcha']
