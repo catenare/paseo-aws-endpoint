@@ -10,7 +10,7 @@ app.config.from_object(__name__)
 app.config.update(dict(
   SECRET_KEY="THISISMYSECRETKEY",
   DB_TABLE="alpha_registration",
-  CAPTCHA_KEY="6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe",
+  CAPTCHA_KEY="6LcbXDQUAAAAAP2G436cLxoUhSdMJ_03lUDzhD2h",
   CAPTCHA_VERIFY_URL="https://www.google.com/recaptcha/api/siteverify"
 ))
 app.config.from_envvar('FLASKR_SETTINGS', silent=True)
@@ -34,7 +34,7 @@ def register():
 def verify_captcha(captcha):
   captcha_data = {
     'secret': app.config['CAPTCHA_KEY'],
-    'response': captcha
+    'response': captcha['captcha']
   }
   verify = requests.post(
     app.config['CAPTCHA_VERIFY_URL'], data=captcha_data
