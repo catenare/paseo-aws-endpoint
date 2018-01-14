@@ -10,7 +10,7 @@ app.config.from_object(__name__)
 app.config.update(dict(
   SECRET_KEY="THISISMYSECRETKEY",
   DB_TABLE="alpha_registration",
-  CAPTCHA_KEY="6LcbXDQUAAAAAP2G436cLxoUhSdMJ_03lUDzhD2h",
+  CAPTCHA_KEY="",
   CAPTCHA_VERIFY_URL="https://www.google.com/recaptcha/api/siteverify"
 ))
 app.config.from_envvar('FLASKR_SETTINGS', silent=True)
